@@ -37,6 +37,10 @@ class HomeController extends Controller
         return view('thanks');
     }
 
+    public function manual(){
+        return view('auth.login-bk.blade');
+    }
+
 
 
     public function subscription(Request $request){
