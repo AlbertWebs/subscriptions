@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="African Pharmaceutical Reviews | Subscribers To Our Updates">
+    <meta name="description" content="African Pharmaceutical Review | Subscribers To Our Updates">
     <meta name="author" content="Ansonika">
-    <title>African Pharmaceutical Reviews | Subscribers To Our Updates</title>
+    <title>African Pharmaceutical Review | Subscribers To Our Updates</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -76,23 +76,26 @@
 						<ul>
 							<li><a href="https://web.facebook.com/profile.php?id=100094284684632"><i class="bi bi-facebook"></i></a></li>
 							<li><a href="#0"><i class="bi bi-twitter-x"></i></a></li>
-							<li><a href="#0"><i class="bi bi-instagram"></i></a></li>
+							<li><a href="#0"><i class="bi bi-youtube"></i></a></li>
 							<li><a href="https://www.linkedin.com/company/african-pharmaceutical-review/about/?viewAsMember=true"><i class="bi bi-linkedin"></i></a></li>
 						</ul>
 					</div>
 					<!-- /social -->
 					<div>
 						<figure><img src="{{asset('subscribers/img/pharms.svg')}}" alt="" class="img-fluid"></figure>
-						<h2>Subscribe To Our 1# Issue</h2>
+						<h2>Subscribe for FREE to our #1 issue</h2>
 						<p>
-							Stay informed with the latest news, publications, and updates from the world of pharmaceuticals by subscribing to African Pharmaceutical Reviews. Join our community to receive exclusive newsletters and stay up-to-date with cutting-edge research and developments in the field.
+							By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights,
+cutting-edge information from seasoned industry experts and much more. You will also be
+informed about crucial industry events that are poised to shape the world of pharmaceuticals
+and biotechnology. Join our community today!
 						</p>
 						<!-- <a href="#" class="btn_1 rounded" target="_parent">
 
 						</a> -->
 						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
 					</div>
-					<div class="copy">© 2024 African Pharmaceutical Reviews</div>
+					<div class="copy">© 2024 African Pharmaceutical Review</div>
 				</div>
 				<!-- /content-left-wrapper -->
 			</div>
@@ -111,24 +114,103 @@
 							<div id="middle-wizard">
 								<div class="step">
 									<h3 class="main_question">Please fill with your details</h3>
-									<div class="form-group">
-										<input type="text" name="name" class="form-control required @error('name') is-invalid @enderror" placeholder="Full Name">
-                                        @error('name')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-									</div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="styled-select clearfix">
+                                                <select class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="title">
+                                                    (Prof, Dr, Mr, Miss, Mrs, Ms, Other)
+                                                    <option value="" readonly> Title</option>
+                                                    <option value="Prof">Prof</option>
+                                                    <option value="Dr">Dr</option>
+                                                    <option value="Mr">Mr</option>
+                                                    <option value="Miss">Miss</option>
+                                                    <option value="Mrs">Mrs</option>
+                                                    <option value="Ms">Ms</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="fname" class="form-control required @error('fname') is-invalid @enderror" placeholder="First Name">
+                                                @error('fname')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
 
-									<div class="form-group">
-										<input type="email" name="email" class="form-control required @error('email') is-invalid @enderror" placeholder="Your Email">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="lname" class="form-control required @error('lname') is-invalid @enderror" placeholder="Last Name">
+                                                @error('lname')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control required @error('email') is-invalid @enderror" placeholder="Your Email">
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+
+                                            <div class="form-group">
+                                                <input type="text" name="address" class="form-control required @error('address') is-invalid @enderror" placeholder="Address">
+                                                @error('address')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" name="phone" class="form-control required @error('phone') is-invalid @enderror" placeholder="Phone Number">
+                                                @error('phone')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+
+
+                                    <div class="form-group">
+										<div class="styled-select clearfix">
+											<select class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="Job_function">
+												<option value="" readonly>Job Title</option>
+												<option value="Consultant">Consultant</option>
+                                                <option value="Pharmacist">Pharmacist</option>
+                                                <option value="Medical Doctor">Medical Doctor</option>
+                                                <option value="dentist">Dentist</option>
+                                                <option value="nurse">Nurse</option>
+
+                                                <option value="Professor">Professor</option>
+                                                <option value="Supply Chain Manager">Supply Chain Manager</option>
+                                                <option value="QA/QC manager">QA/QC manager</option>
+
+                                                <option value="Marketing Manager">Marketing Manager</option>
+                                                <option value="Sales representative">Sales representative</option>
+                                                <option value="Procurement">Procurement</option>
+                                                <option value="Other">Other</option>
+											</select>
+										</div>
 									</div>
+
 
                                     <div class="form-group">
 										<div class="styled-select clearfix">
@@ -381,6 +463,8 @@
 											</select>
 										</div>
 									</div>
+
+
 
                                     <div class="form-group">
 										<input type="text" name="state" class="form-control required" placeholder="City/County/State">

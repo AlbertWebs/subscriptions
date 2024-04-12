@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="African Pharmaceutical Reviews | Subscribers To Our Updates">
+    <meta name="description" content="African Pharmaceutical Review | Subscribers To Our Updates">
     <meta name="author" content="Ansonika">
-    <title>African Pharmaceutical Reviews | Subscribers To Our Updates</title>
+    <title>African Pharmaceutical Review | Subscribers To Our Updates</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -60,8 +60,17 @@
 
 	<nav>
 		<ul class="cd-primary-nav">
-			<li><a href="index.html" class="animated_link">Home</a></li>
-			<li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+			<li>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                 {{ __('Logout') }}
+             </a>
+
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                 @csrf
+             </form>
+            </li>
 		</ul>
 	</nav>
 	<!-- /menu -->
@@ -73,25 +82,28 @@
 					<a href="{{url('/')}}" id="logo"><img src="{{asset('subscribers/img/aprlogo.png')}}" alt="" width="250"></a>
 					<div id="social">
 						<ul>
-							<li><a href="#0"><i class="bi bi-facebook"></i></a></li>
+							<li><a href="https://web.facebook.com/profile.php?id=100094284684632"><i class="bi bi-facebook"></i></a></li>
 							<li><a href="#0"><i class="bi bi-twitter-x"></i></a></li>
-							<li><a href="#0"><i class="bi bi-instagram"></i></a></li>
-							<li><a href="#0"><i class="bi bi-linkedin"></i></a></li>
+							<li><a href="#0"><i class="bi bi-youtube"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/african-pharmaceutical-review/about/?viewAsMember=true"><i class="bi bi-linkedin"></i></a></li>
 						</ul>
 					</div>
 					<!-- /social -->
 					<div>
 						<figure><img src="{{asset('subscribers/img/info_graphic_1.svg')}}" alt="" class="img-fluid"></figure>
-						<h2>Subscribe To Our 1# Issue</h2>
+						<h2>Subscribe for FREE to our #1 issue</h2>
 						<p>
-							Stay informed with the latest news, publications, and updates from the world of pharmaceuticals by subscribing to African Pharmaceutical Reviews. Join our community to receive exclusive newsletters and stay up-to-date with cutting-edge research and developments in the field.
+							By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights,
+                            cutting-edge information from seasoned industry experts and much more. You will also be
+                            informed about crucial industry events that are poised to shape the world of pharmaceuticals
+                            and biotechnology. Join our community today!
 						</p>
 						<!-- <a href="#" class="btn_1 rounded" target="_parent">
 
 						</a> -->
 						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
 					</div>
-					<div class="copy">© 2024 African Pharmaceutical Reviews</div>
+					<div class="copy">© 2024 African Pharmaceutical Review</div>
 				</div>
 				<!-- /content-left-wrapper -->
 			</div>
@@ -108,94 +120,103 @@
 							<input id="website" name="website" type="text" value="">
 							<!-- Leave for security protection, read docs for details -->
 							<div id="middle-wizard">
-								<div class="step">
-									<h3 class="main_question"><strong>1/2</strong>Please fill with your details</h3>
-									<div class="form-group">
-                                        <label>Whats Your Primary Job Function</label>
-										<input type="text" name="Job_function" class="form-control required" placeholder="Job">
-									</div>
 
-								</div>
 
 								<!-- /step-->
 								<div class="submit step">
 									<h3 class="main_question"><strong>2/2</strong>Areas of Interest</h3>
-									<div class="form-group">
-										<label class="container_check version_2">Microbiology
-											<input type="checkbox" name="areas_of_interest[]" value="Microbiology" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2"> Analytical Techniques
-											<input type="checkbox" name="areas_of_interest[]" value="Analytical Techniques" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2">Drug Delivery
-											<input type="checkbox" name="areas_of_interest[]" value="Drug Delivery" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2">Formulation Development
-											<input type="checkbox" name="areas_of_interest[]" value="Formulation Development" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2">Bioprocessing
-											<input type="checkbox" name="areas_of_interest[]" value="Bioprocessing" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-                                    {{--  --}}
                                     <div class="form-group">
-										<label class="container_check version_2">Manufacturing,
-											<input type="checkbox" name="areas_of_interest[]" value="Manufacturing" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2"> Quality Assurance /Quality Control,
-											<input type="checkbox" name="areas_of_interest[]" value="Quality Assurance /Quality Control," class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2">Biopharma
-											<input type="checkbox" name="areas_of_interest[]" value="Biopharma" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2">Packaging and Labelling
-											<input type="checkbox" name="areas_of_interest[]" value="Formulation Development" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_check version_2">Regulatory Affairs
-											<input type="checkbox" name="areas_of_interest[]" value="Regulatory Affairs" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-                                    <div class="form-group">
-										<label class="container_check version_2">Health Supply Chain Management
-											<input type="checkbox" name="areas_of_interest[]" value="Regulatory Affairs" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-                                    <div class="form-group">
-										<label class="container_check version_2">Artificial Intelligence
-											<input type="checkbox" name="areas_of_interest[]" value="Artificial Intelligence" class="required" onchange="getVals(this, 'areas_of_interest');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-                                    <div class="form-group">
-										<label class="container_check version_2">Other
-											<input type="checkbox" name="areas_of_interest[]" value="Other" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                        <label>Name Of Organization</label>
+                                        <input type="text" name="organization" class="form-control required" placeholder="organization">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Microbiology
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Microbiology" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2"> Analytical Techniques
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Analytical Techniques" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Drug Delivery
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Drug Delivery" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Formulation Development
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Formulation Development" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Bioprocessing
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Bioprocessing" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            {{--  --}}
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Manufacturing,
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Manufacturing" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2"> Quality Assurance /Quality Control,
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Quality Assurance /Quality Control," class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Biopharma
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Biopharma" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Packaging and Labelling
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Formulation Development" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Regulatory Affairs
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Regulatory Affairs" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Health Supply Chain Management
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Regulatory Affairs" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Artificial Intelligence
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Artificial Intelligence" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Other
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Other" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group terms">
+										<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>
+											<input type="checkbox" name="terms" value="Yes" class="required">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -245,6 +266,7 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
+                    <p>Now Lets do the lorem ipsum for Pharvers</p>
 					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
 					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
 					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>

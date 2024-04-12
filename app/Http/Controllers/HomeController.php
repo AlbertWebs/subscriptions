@@ -47,12 +47,12 @@ class HomeController extends Controller
         if(isset($request->website)){
             // this is a spam
         }else{
-            $Job_function = $request->Job_function;
+            $organization = $request->organization;
             $areas_of_interest = $request->areas_of_interest;
         }
         // dd($request->all());
         $updateUserDetails = array(
-            'Job_function' => $Job_function,
+            'organization' => $organization,
             'areas_of_interest' => $areas_of_interest
         );
         DB::table('users')->where('id',Auth::User()->id)->update($updateUserDetails);
@@ -64,10 +64,10 @@ class HomeController extends Controller
         $SubscriberId = Auth::User()->email;
         $Subject = "Your Subscription:Success";
         // Send Email To Subscriber
-        SendEmail::sendEmail($Sender,$SenderId,$MessageToSubscriber,$SubscriberName,$SubscriberId,$Subject);
+        // SendEmail::sendEmail($Sender,$SenderId,$MessageToSubscriber,$SubscriberName,$SubscriberId,$Subject);
         $Subject = "New Subscriber:Success";
         // Send Email To Pharverse
-        SendEmail::sendEmails($Sender,$SenderId,$MessageToCompany,$SubscriberName,$SubscriberId,$Subject);
+        // SendEmail::sendEmails($Sender,$SenderId,$MessageToCompany,$SubscriberName,$SubscriberId,$Subject);
         return view('thanks');
     }
 }

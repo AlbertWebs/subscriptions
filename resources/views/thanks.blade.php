@@ -223,7 +223,7 @@
                                                                   <tbody>
                                                                      <tr>
                                                                         <td class="pc-xs-fs-30 pc-xs-lh-42 pc-fb-font" style="font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 900; line-height: 46px; letter-spacing: -0.6px; color: #4CAF50; text-align: center" valign="top">
-                                                                            Subscription Successful  <br>
+                                                                            Successful  <br>
                                                                             <span class="fa fa-check-square fa-2x " aria-hidden="true"></span>
                                                                         </td>
                                                                      </tr>
@@ -234,8 +234,8 @@
                                                                   <tbody>
                                                                      <tr>
                                                                         <td class="pc-fb-font" style="font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 300; line-height: 28px; color: #322e2e; text-align: center" valign="top">
-                                                                           <div style="text-align: center;">Hi, {{Auth::user()->name}}.<br />
-                                                                              Thank you for signing up for our digital margazines!
+                                                                           <div style="text-align: center;">
+                                                                            Congratulations {{Auth::user()->fname}}, {{Auth::user()->lname}} you are now subscribed!
                                                                            </div>
                                                                         </td>
                                                                      </tr>

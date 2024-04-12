@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="African Pharmaceutical Reviews | Subscribers To Our Updates">
+    <meta name="description" content="African Pharmaceutical Review | Subscribers To Our Updates">
     <meta name="author" content="Ansonika">
-    <title>African Pharmaceutical Reviews | Subscribers To Our Updates</title>
+    <title>African Pharmaceutical Review | Subscribers To Our Updates</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -83,16 +83,19 @@
 					<!-- /social -->
 					<div>
 						<figure><img src="img/info_graphic_1.svg" alt="" class="img-fluid"></figure>
-						<h2>Subscribe To Our 1# Issue</h2>
+						<h2>Subscribe for FREE to our #1 issue</h2>
 						<p>
-							Stay informed with the latest news, publications, and updates from the world of pharmaceuticals by subscribing to African Pharmaceutical Reviews. Join our community to receive exclusive newsletters and stay up-to-date with cutting-edge research and developments in the field.
+							By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights,
+cutting-edge information from seasoned industry experts and much more. You will also be
+informed about crucial industry events that are poised to shape the world of pharmaceuticals
+and biotechnology. Join our community today!
 						</p>
 						<!-- <a href="#" class="btn_1 rounded" target="_parent">
 
 						</a> -->
 						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
 					</div>
-					<div class="copy">© 2024 African Pharmaceutical Reviews</div>
+					<div class="copy">© 2024 African Pharmaceutical Review</div>
 				</div>
 				<!-- /content-left-wrapper -->
 			</div>
