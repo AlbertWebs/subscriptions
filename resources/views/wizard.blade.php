@@ -135,21 +135,49 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <input type="text" name="phone" class="form-control required @error('phone') is-invalid @enderror" placeholder="Phone Number">
-                                                @error('phone')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
+                                        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+                                        <style>
+                                            .iti {
+                                                position: relative;
+                                                display: inline-block;
+                                                width: 100%;
+                                            }
+                                        </style>
+
+
+                                      <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input   type="tel" name="phone" class="form-control required @error('phone') is-invalid @enderror" placeholder="Phone Number"  id="phone" >
+
                                         </div>
+                                      </div>
+
+                                      <script>
+                                        const phoneInputField = document.querySelector("#phone");
+                                        const phoneInput = window.intlTelInput(phoneInputField, {
+                                          utilsScript:
+                                            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                                        });
+                                      </script>
+
                                     </div>
 
+                                    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
+                                    <style>
+                                        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+                                            width: 100%;
+                                        }
+                                    </style> --}}
+
+
                                     <div class="form-group">
-										<div class="styled-select clearfix">
-											<select class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="country">
+										<div class="styled-select clearfix" style="width:100%">
+											<select style="width:100%" class="wide required selectpicker" data-show-subtext="false" data-live-search="true"  name="country">
 												<option value="" readonly>Your Country</option>
 												<option value="Afghanistan">Afghanistan</option>
                                                 <option value="Åland Islands">Åland Islands</option>
@@ -401,6 +429,8 @@
 
 
 
+
+
                                     <div class="form-group">
 										<input type="text" name="state" class="form-control required" placeholder="City/County/State">
 									</div>
@@ -562,7 +592,7 @@
                                     {{--  --}}
 
                                     <div class="form-group terms">
-										<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>
+										<label class="container_check">I accept African Pharmaceutical Review's <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms & Conditions and Privacy Policy </a>
 											<input type="checkbox" name="terms" value="Yes" class="required">
 											<span class="checkmark"></span>
 										</label>
