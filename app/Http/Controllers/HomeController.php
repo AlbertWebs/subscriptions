@@ -53,7 +53,13 @@ class HomeController extends Controller
         // dd($request->all());
         $updateUserDetails = array(
             'organization' => $organization,
-            'areas_of_interest' => $areas_of_interest
+            'areas_of_interest' => $areas_of_interest,
+            'address' => $request->address,
+            'phone' => $request->phone,
+            'country' => $request->country,
+            'state' => $request->state,
+            'other_Job_function' => $request->other_Job_function,
+
         );
         DB::table('users')->where('id',Auth::User()->id)->update($updateUserDetails);
         $Sender = "info@africanpharmaceuticalreviews.com";

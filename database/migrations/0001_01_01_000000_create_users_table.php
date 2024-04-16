@@ -16,11 +16,12 @@ return new class extends Migration
             $table->string('fname');
             $table->string('lname');
             $table->string('title');
-            $table->string('address');
-            $table->string('organization');
-            $table->string('phone');
+            $table->string('address')->nullable();
+            $table->string('organization')->nullable();
+            $table->string('phone')->nullable();
             $table->text('areas_of_interest')->nullable();
             $table->string('Job_function')->nullable();
+            $table->string('other_Job_function')->default('0');
             $table->text('country')->nullable();
             $table->string('state')->nullable();
             $table->string('email')->unique();
