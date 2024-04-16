@@ -59,7 +59,7 @@ class HomeController extends Controller
             'country' => $request->country,
             'state' => $request->state,
             'other_Job_function' => $request->other_Job_function,
-
+            'other_areas_of_interest' => $request->other_areas_of_interest,
         );
         DB::table('users')->where('id',Auth::User()->id)->update($updateUserDetails);
         $Sender = "info@africanpharmaceuticalreviews.com";

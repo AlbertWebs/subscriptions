@@ -412,7 +412,7 @@
 									<h3 class="main_question"><strong>2/2</strong>Areas of Interest</h3>
                                     <div class="form-group">
 										<div class="styled-select clearfix">
-											<select class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="Job_function">
+											<select onchange="showDiv(this)" class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="Job_function">
 												<option value="" readonly>Job Title</option>
 												<option value="Consultant">Consultant</option>
                                                 <option value="Pharmacist">Pharmacist</option>
@@ -435,15 +435,25 @@
                                             {{--  --}}
 										</div>
 									</div>
-                                    <div class="form-group">
+                                    <div class="form-group"  id="hidden_div">
                                         <label>Specify Job Title</label>
                                         <input type="text" name="other_Job_function" class="form-control required" placeholder="Specify">
                                     </div>
+                                    <script type="text/javascript">
+                                        function showDiv(select){
+                                           if(select.value=="Other"){
+                                            document.getElementById('hidden_div').style.display = "block";
+                                           } else{
+                                            document.getElementById('hidden_div').style.display = "none";
+                                           }
+                                        }
+                                    </script>
                                     <div class="form-group">
                                         <label>Name Of Organization</label>
                                         <input type="text" name="organization" class="form-control required" placeholder="organization">
                                     </div>
                                     <div class="row">
+                                        <label>Areas of Interest</label>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="container_check version_2">Microbiology
@@ -522,12 +532,35 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="container_check version_2">Other
-                                                    <input type="checkbox" name="areas_of_interest[]" value="Other" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <input id="show" type="checkbox" name="areas_of_interest[]" value="Other" class="required" onchange="getVals(this, 'areas_of_interest');">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
+                                            {{--  --}}
+                                            <div class="form-group"  id="box">
+                                                <label>Specify Area of Interest</label>
+                                                <input type="text" name="other_areas_of_interest" class="form-control required" placeholder="Specify">
+                                            </div>
+                                            {{--  --}}
                                         </div>
                                     </div>
+
+                                    {{--  --}}
+                                    <script>
+                                        const checkbox = document.getElementById('show');
+
+                                        const box = document.getElementById('box');
+
+                                        checkbox.addEventListener('click', function handleClick() {
+                                        if (checkbox.checked) {
+                                            box.style.display = 'block';
+                                        } else {
+                                            box.style.display = 'none';
+                                        }
+                                        });
+                                    </script>
+                                    {{--  --}}
+
                                     <div class="form-group terms">
 										<label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>
 											<input type="checkbox" name="terms" value="Yes" class="required">
