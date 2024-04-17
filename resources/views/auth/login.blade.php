@@ -31,7 +31,7 @@
 	<!-- MODERNIZR MENU -->
 	<script src="{{asset('subscribers/js/modernizr.js')}}"></script>
 
-	<script type="text/javascript">
+	{{-- <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-11097556-8']);
         _gaq.push(['_trackPageview']);
@@ -44,7 +44,7 @@
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(ga, s);
         })();
-    </script>
+    </script> --}}
 
 </head>
 
@@ -70,7 +70,7 @@
 		<div class="row row-height">
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
-					<a href="{{url('/')}}" id="logo"><img src="{{asset('subscribers/img/aprlogo.png')}}" alt="" width="250"></a>
+					<a href="{{url('/')}}" id="logo"><img  src="{{asset('subscribers/img/aprlogo.png')}}" alt="" ></a>
 
 					<div id="social">
 						<ul>
@@ -82,13 +82,13 @@
 					</div>
 					<!-- /social -->
 					<div>
-						<figure><img src="{{asset('subscribers/img/pharms.svg')}}" alt="" class="img-fluid"></figure>
+						<figure><img  src="{{asset('subscribers/img/issue.png')}}" alt="" class="img-fluid banner-img"></figure>
 						<h2>Subscribe for FREE to our #1 issue</h2>
 						<p>
 							By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights,
-cutting-edge information from seasoned industry experts and much more. You will also be
-informed about crucial industry events that are poised to shape the world of pharmaceuticals
-and biotechnology. Join our community today!
+                            cutting-edge information from seasoned industry experts and much more. You will also be
+                            informed about crucial industry events that are poised to shape the world of pharmaceuticals
+                            and biotechnology. Join our community today!
 						</p>
 						<!-- <a href="#" class="btn_1 rounded" target="_parent">
 
