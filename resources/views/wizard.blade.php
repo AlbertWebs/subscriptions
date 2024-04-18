@@ -593,7 +593,7 @@
                                     {{--  --}}
 
                                     <div class="form-group terms">
-										<label class="container_check">I accept African Pharmaceutical Review's <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms & Conditions and Privacy Policy </a>
+										<label class="container_check">I accept African Pharmaceutical Review's <a href="{{url('/')}}/terms-and-conditions" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms & Conditions and Privacy Policy </a>
 											<input type="checkbox" name="terms" value="Yes" class="required">
 											<span class="checkmark"></span>
 										</label>

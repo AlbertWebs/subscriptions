@@ -41,7 +41,9 @@ class HomeController extends Controller
         return view('auth.login-bk.blade');
     }
 
-
+    public function terms(){
+        return view('terms');
+    }
 
     public function subscription(Request $request){
         if(isset($request->website)){
