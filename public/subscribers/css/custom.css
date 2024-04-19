@@ -35,6 +35,9 @@
         /* width:auto; */
      }
      #logo img{
-        width:180px;
+        width:160px;
+    }
+    #social {
+        right: 10px;
     }
 }

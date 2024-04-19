@@ -167,7 +167,7 @@
                         <p>(b) service providers&nbsp;</p>
                         <p>(c) other search information providers based both inside and outside the Kenya.</p>
                         <ul>
-                            <li >
+                            <li php >
                                 <p>Contact, Financial and Transaction Data from providers of technical, payment and delivery services.</p>
                             </li>
                             <li >
