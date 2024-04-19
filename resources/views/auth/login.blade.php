@@ -84,7 +84,7 @@
 					<div>
 						<figure><img  src="{{asset('subscribers/img/issue.png')}}" alt="" class="img-fluid banner-img"></figure>
 						<h2>Subscribe for FREE to our #1 issue</h2>
-						<p>
+						<p class="hide-mobile">
 							By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights,
                             cutting-edge information from seasoned industry experts and much more. You will also be
                             informed about crucial industry events that are poised to shape the world of pharmaceuticals
