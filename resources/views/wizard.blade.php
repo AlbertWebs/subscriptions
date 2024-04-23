@@ -123,7 +123,20 @@
 							<div id="middle-wizard">
 
                                 <div class="step">
+                                    <h3 class="main_question"><strong>1/3</strong>Your Contact Details</h3>
                                     <div class="row">
+                                        <div class="col-lg-12">
+
+                                            <div class="form-group">
+                                                <input type="text" value="{{Auth::User()->email}}" readonly name="email" class="form-control required @error('email') is-invalid @enderror" placeholder="sample@example.com">
+                                                @error('email')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+
                                         <div class="col-lg-12">
 
                                             <div class="form-group">
@@ -439,8 +452,8 @@
 
 
 								<!-- /step-->
-								<div class="submit step">
-									<h3 class="main_question"><strong>2/2</strong>Areas of Interest</h3>
+								<div class="step">
+									<h3 class="main_question"><strong>2/3</strong>Areas of Interest</h3>
                                     <div class="form-group">
 										<div class="styled-select clearfix">
 											<select onchange="showDiv(this)" class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="Job_function">
@@ -468,7 +481,7 @@
 									</div>
                                     <div class="form-group"  id="hidden_div">
                                         <label>Specify Job Title</label>
-                                        <input type="text" name="other_Job_function" class="form-control required" placeholder="Specify">
+                                        <input type="text" name="other_Job_function" class="form-control" placeholder="Specify">
                                     </div>
                                     <script type="text/javascript">
                                         function showDiv(select){
@@ -481,7 +494,7 @@
                                     </script>
                                     <div class="form-group">
                                         <label>Name Of Organization</label>
-                                        <input type="text" name="organization" class="form-control required" placeholder="organization">
+                                        <input type="text" name="organization" class="form-control required" placeholder="Organization">
                                     </div>
                                     <div class="row">
                                         <label>Areas of Interest</label>
@@ -570,7 +583,7 @@
                                             {{--  --}}
                                             <div class="form-group"  id="box">
                                                 <label>Specify Area of Interest</label>
-                                                <input type="text" name="other_areas_of_interest" class="form-control required" placeholder="Specify">
+                                                <input type="text" name="other_areas_of_interest" class="form-control" placeholder="Specify">
                                             </div>
                                             {{--  --}}
                                         </div>
@@ -591,6 +604,50 @@
                                         });
                                     </script>
                                     {{--  --}}
+								</div>
+								<!-- /step-->
+
+                                <!-- /step-->
+								<div class="submit step">
+									<h3 class="main_question"><strong>3/3</strong>Subscription Options</h3>
+                                    <div class="row">
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Digital version of the African Pharmaceutical Review (published quarterly)
+                                                    <input type="checkbox" name="subscription_options[]" value="Digital version of the African Pharmaceutical Review" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2"> Newsletter
+                                                    <input type="checkbox" name="subscription_options[]" value="Analytical Techniques" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Third party (application notes, product development and updates from partners)
+                                                    <input type="checkbox" name="subscription_options[]" value="Drug Delivery" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Webinar notifications
+                                                    <input type="checkbox" name="subscription_options[]" value="Webinar notifications" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="container_check version_2">Event notifications
+                                                    <input type="checkbox" name="subscription_options[]" value="Event notifications" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            {{--  --}}
+
+                                        </div>
+                                    </div>
+
 
                                     <div class="form-group terms">
 										<label class="container_check">I accept African Pharmaceutical Review's <a href="{{url('/')}}/terms-and-conditions" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms & Conditions and Privacy Policy </a>

@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('Job_function')->nullable();
             $table->string('other_Job_function')->nullable();
             $table->string('other_areas_of_interest')->nullable();
+            $table->string('subscription_options')->nullable();
+            $table->string('subscription_status')->nullable();
             $table->text('country')->nullable();
             $table->string('state')->nullable();
             $table->string('email')->unique();

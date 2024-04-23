@@ -60,9 +60,13 @@ class HomeController extends Controller
             'phone' => $request->phone,
             'country' => $request->country,
             'state' => $request->state,
+            'Job_function' => $request->Job_function,
             'other_Job_function' => $request->other_Job_function,
             'other_areas_of_interest' => $request->other_areas_of_interest,
+            'subscription_options' => $request->subscription_options,
+            'subscription_status' => 'active',
         );
+        // dd($updateUserDetails);
         DB::table('users')->where('id',Auth::User()->id)->update($updateUserDetails);
         $Sender = "info@africanpharmaceuticalreviews.com";
         $SenderId = "Africa Pharmaceutical Reviews";
