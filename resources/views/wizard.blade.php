@@ -540,7 +540,7 @@
                                         <label>Areas of Interest</label>
                                         <div class="form-group">
                                             <label class="container_check version_2">Select All
-                                                <input type="checkbox" name="areas_of_interest" onClick="selectAll(this,'areas_of_interest')" class="required selectall" onchange="getVals(this, 'areas_of_interest');">
+                                                <input type="checkbox" name="areas_of_interest" onClick="selectAll(this,'areas_of_interest')" class="selectall" onchange="getVals(this, 'areas_of_interest');">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -728,7 +728,7 @@
 
 
                                     <div class="form-group terms">
-										<label class="container_check">I accept African Pharmaceutical Review's <a href="{{url('/')}}/terms-and-conditions" data-bs-toggle="modal" data-bs-target="#terms-txt">Terms & Conditions and Privacy Policy </a>
+										<label class="container_check">I accept African Pharmaceutical Review's <a target="new" href="{{url('/')}}/terms-and-conditions" >Terms & Conditions and Privacy Policy </a>
 											<input type="checkbox" name="terms" value="Yes" class="required">
 											<span class="checkmark"></span>
 										</label>
