@@ -192,8 +192,6 @@
 
 
                                         $('.iti__country').on('tap', function(e){
-                                        //    console.log(e.target.innerHTML);
-                                        //    alert(e.target.innerHTML)
                                            e.preventDefault();
                                            var country = $(this).find('.iti__country-name').text();
                                            var code = $(this).find('.iti__dial-code').text();
