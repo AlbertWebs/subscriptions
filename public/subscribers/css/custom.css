@@ -23,6 +23,7 @@
 }
 .banner-img{
    width:300px;
+   height:auto !important;
 }
 
 @media (max-width: 767px) {

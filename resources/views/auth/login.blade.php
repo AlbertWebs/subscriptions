@@ -277,7 +277,7 @@
         }
         if (password.match(/[$@#&!]+/) && password.match(/[0-9]+/) && password.match(/[A-Z]+/) && password.match(/[a-z]+/)) {
             strength += 1;
-            display.innerHTML = "Good to Go";
+            display.innerHTML = "";
             display.classList.remove('text-warning')
             display.className += " text-success";
 

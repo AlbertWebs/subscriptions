@@ -188,7 +188,21 @@
                                            // alert(code)
                                            $("#countrys").val(country);
                                            $("#code").val(code);
-                                        })
+                                        });
+
+
+                                        $('.iti__country').on('tap', function(e){
+                                        //    console.log(e.target.innerHTML);
+                                        //    alert(e.target.innerHTML)
+                                           e.preventDefault();
+                                           var country = $(this).find('.iti__country-name').text();
+                                           var code = $(this).find('.iti__dial-code').text();
+                                           // alert(code)
+                                           $("#countrys").val(country);
+                                           $("#code").val(code);
+                                        });
+
+
                                     </script>
 
                                     {{--  --}}
@@ -204,7 +218,7 @@
                                         }
                                     </style> --}}
 
-                                    <input   type="hidden" name="country_code" class="form-control required @error('country') is-invalid @enderror" placeholder="Your Country Code"  id="code" >
+                                    <input   type="hidden" name="country_code" class="form-control  @error('country') is-invalid @enderror" placeholder="Your Country Code"  id="code" >
 
 
                                     <div class="col-lg-12">
@@ -715,7 +729,7 @@
 	</div>
 	<!-- /cd-overlay-content -->
 
-	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	{{-- <a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a> --}}
 	<!-- /menu button -->
 
 	<!-- Modal terms -->
