@@ -179,7 +179,8 @@
                                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
                                     {{--  --}}
                                     <script>
-                                        $('.iti__country').click(function(e) {
+                                        // $('.iti__country').click(function(e) {
+                                        $(document).on("click tap touchstart", ".iti__country", function(e){
                                         //    console.log(e.target.innerHTML);
                                         //    alert(e.target.innerHTML)
                                            e.preventDefault();
@@ -495,7 +496,7 @@
 									<h3 class="main_question"><strong>2/3</strong>Areas of Interest</h3>
                                     <div class="form-group">
 										<div class="styled-select clearfix">
-											<select onchange="showDiv(this)" class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="Job_function">
+											<select onchange="showDiv(this)" class="wide  selectpicker" data-show-subtext="true" data-live-search="true"  name="Job_function">
 												<option value="" readonly>Job Title</option>
 												<option value="Consultant">Consultant</option>
                                                 <option value="Pharmacist">Pharmacist</option>
@@ -537,6 +538,27 @@
                                     </div>
                                     <div class="row">
                                         <label>Areas of Interest</label>
+                                        <div class="form-group">
+                                            <label class="container_check version_2">Select All
+                                                <input type="checkbox" name="areas_of_interest" onClick="selectAll(this,'areas_of_interest')" class="required selectall" onchange="getVals(this, 'areas_of_interest');">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <script language="JavaScript">
+                                            // $('.selectall').click(function() {
+                                            //     if ($(this).is(':checked')) {
+                                            //         $('div input').attr('checked', true);
+                                            //     } else {
+                                            //         $('div input').attr('checked', false);
+                                            //     }
+                                            // });
+
+                                            function selectAll(source) {
+                                                checkboxes = document.getElementsByName('areas_of_interest[]');
+                                                for(var i in checkboxes)
+                                                    checkboxes[i].checked = source.checked;
+                                            }
+                                        </script>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="container_check version_2">Microbiology
@@ -615,7 +637,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="container_check version_2">Other
-                                                    <input id="show" type="checkbox" name="areas_of_interest[]" value="Other" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <input id="show" type="checkbox" name="others_areas_of_interest[]" value="Other" class="" onchange="getVals(this, 'areas_of_interest');">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>
@@ -652,35 +674,52 @@
                                     <div class="row">
 
                                         <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <label class="container_check version_2">Digital version of the African Pharmaceutical Review (published quarterly)
-                                                    <input type="checkbox" name="subscription_options[]" value="Digital version of the African Pharmaceutical Review" class="required" onchange="getVals(this, 'areas_of_interest');">
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="container_check version_2"> Newsletter
-                                                    <input type="checkbox" name="subscription_options[]" value="Analytical Techniques" class="required" onchange="getVals(this, 'areas_of_interest');">
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="container_check version_2">Third party (application notes, product development and updates from partners)
-                                                    <input type="checkbox" name="subscription_options[]" value="Drug Delivery" class="required" onchange="getVals(this, 'areas_of_interest');">
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="container_check version_2">Webinar notifications
-                                                    <input type="checkbox" name="subscription_options[]" value="Webinar notifications" class="required" onchange="getVals(this, 'areas_of_interest');">
-                                                    <span class="checkmark"></span>
-                                                </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="container_check version_2">Event notifications
-                                                    <input type="checkbox" name="subscription_options[]" value="Event notifications" class="required" onchange="getVals(this, 'areas_of_interest');">
-                                                    <span class="checkmark"></span>
-                                                </label>
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <label class="container_check version_2">Select All
+                                                        <input type="checkbox" name="subscription_options" onClick="selectAlls(this,'subscription_options')" class="selectall" onchange="getVals(this, 'subscription_options');">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <script language="JavaScript">
+                                                    function selectAlls(source) {
+                                                        checkboxes = document.getElementsByName('subscription_options[]');
+                                                        for(var i in checkboxes)
+                                                            checkboxes[i].checked = source.checked;
+                                                    }
+                                                </script>
+                                                <div class="form-group">
+                                                    <label class="container_check version_2">Digital version of the African Pharmaceutical Review (published quarterly)
+                                                        <input type="checkbox" name="subscription_options[]" value="Digital version of the African Pharmaceutical Review" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="container_check version_2"> Newsletter
+                                                        <input type="checkbox" name="subscription_options[]" value="Analytical Techniques" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="container_check version_2">Third party (application notes, product development and updates from partners)
+                                                        <input type="checkbox" name="subscription_options[]" value="Drug Delivery" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="container_check version_2">Webinar notifications
+                                                        <input type="checkbox" name="subscription_options[]" value="Webinar notifications" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="container_check version_2">Event notifications
+                                                        <input type="checkbox" name="subscription_options[]" value="Event notifications" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+
+
                                             </div>
                                             {{--  --}}
 

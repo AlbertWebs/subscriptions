@@ -65,6 +65,7 @@ class HomeController extends Controller
             'other_Job_function' => $request->other_Job_function,
             'other_areas_of_interest' => $request->other_areas_of_interest,
             'subscription_options' => $request->subscription_options,
+            'terms' => $request->terms,
             'subscription_status' => 'active',
         );
         // dd($updateUserDetails);

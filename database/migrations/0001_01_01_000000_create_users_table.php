@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('lname');
             $table->string('title');
             $table->string('address')->nullable();
+            $table->string('terms')->nullable();
             $table->string('country_code')->nullable();
             $table->string('organization')->nullable();
             $table->string('phone')->nullable();
