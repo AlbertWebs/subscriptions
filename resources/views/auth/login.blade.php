@@ -74,10 +74,12 @@
 
 					<div id="social">
 						<ul>
-							<li><a href="https://web.facebook.com/profile.php?id=100094284684632"><i class="bi bi-facebook"></i></a></li>
-							<li><a href="#0"><i class="bi bi-twitter-x"></i></a></li>
-							<li><a href="#0"><i class="bi bi-youtube"></i></a></li>
-							<li><a href="https://www.linkedin.com/company/african-pharmaceutical-review/about/?viewAsMember=true"><i class="bi bi-linkedin"></i></a></li>
+
+                                <li><a href="https://web.facebook.com/profile.php?id=100094284684632"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="https://x.com/af_pharmareview?t=woS7D9KoJmv_eJ3kBEoE3Q&s=08"><i class="bi bi-twitter-x"></i></a></li>
+                                <li><a href="https://youtube.com/@AfricanPharmaceuticalReview?si=IG1Wb0Z_YIi_bufM"><i class="bi bi-youtube"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/african-pharmaceutical-review/about/?viewAsMember=true"><i class="bi bi-linkedin"></i></a></li>
+
 						</ul>
 					</div>
 					<!-- /social -->
