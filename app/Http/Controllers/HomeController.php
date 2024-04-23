@@ -56,6 +56,7 @@ class HomeController extends Controller
         $updateUserDetails = array(
             'organization' => $organization,
             'areas_of_interest' => $areas_of_interest,
+            'country_code' => $request->country_code,
             'address' => $request->address,
             'phone' => $request->phone,
             'country' => $request->country,

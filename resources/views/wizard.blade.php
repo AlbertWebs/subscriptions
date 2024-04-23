@@ -176,6 +176,22 @@
                                       </script>
 
                                     </div>
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+                                    {{--  --}}
+                                    <script>
+                                        $('.iti__country').click(function(e) {
+                                        //    console.log(e.target.innerHTML);
+                                        //    alert(e.target.innerHTML)
+                                           e.preventDefault();
+                                           var country = $(this).find('.iti__country-name').text();
+                                           var code = $(this).find('.iti__dial-code').text();
+                                           // alert(code)
+                                           $("#countrys").val(country);
+                                           $("#code").val(code);
+                                        })
+                                    </script>
+
+                                    {{--  --}}
 
                                     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
@@ -188,8 +204,18 @@
                                         }
                                     </style> --}}
 
+                                    <input   type="hidden" name="country_code" class="form-control required @error('country') is-invalid @enderror" placeholder="Your Country Code"  id="code" >
 
-                                    <div class="form-group">
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input   type="text" name="country" class="form-control required @error('country') is-invalid @enderror" placeholder="Your Country"  id="countrys" >
+
+                                        </div>
+                                    </div>
+
+
+                                    {{-- <div class="form-group">
 										<div class="styled-select clearfix" style="width:100%">
 											<select style="width:100%" class="wide required selectpicker" data-show-subtext="false" data-live-search="true"  name="country">
 												<option value="" readonly>Your Country</option>
@@ -439,7 +465,7 @@
                                                 <option value="Zimbabwe">Zimbabwe</option>
 											</select>
 										</div>
-									</div>
+									</div> --}}
 
 
 
