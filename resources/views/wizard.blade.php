@@ -191,6 +191,10 @@
                                         });
 
 
+                                        $(document).on('vclick', '.iti__country', function(e){
+                                           alert("Now")
+                                        });
+
                                         $('.iti__country').on('tap', function(e){
                                            e.preventDefault();
                                            var country = $(this).find('.iti__country-name').text();
