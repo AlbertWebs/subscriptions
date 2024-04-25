@@ -53,7 +53,7 @@
             <p>{{$content}}</p>
         </div>
         <div class="footer">
-            <p>Contact us at: info@africanpharmaceuticalreviews.pt</p>
+            <p>Contact us at: info@africanpharmaceuticalreview.com</p>
             <p>&copy; {{date('Y')}} African Pharmaceutical Reviews . All rights reserved.</p>
         </div>
     </div>
