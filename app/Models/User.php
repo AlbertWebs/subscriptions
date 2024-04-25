@@ -27,6 +27,7 @@ class User extends Authenticatable
         'country',
         'state',
         'password',
+        'type'
     ];
 
 
@@ -52,4 +53,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    protected function type(): Attribute
+    {
+        return new Attribute(
+            get: fn ($value) =>  ["user", "admin", "manager"][$value],
+        );
+    }
+
+
 }

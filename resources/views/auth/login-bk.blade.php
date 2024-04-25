@@ -83,10 +83,10 @@
 					<!-- /social -->
 					<div>
 						<figure><img src="{{asset('subscribers/img/info_graphic_1.svg')}}" alt="" class="img-fluid"></figure>
-						<h2>Subscribe To Our 1# Issue</h2>
-						<p>
+						<h2>Admin Login</h2>
+						{{-- <p>
 							Stay informed with the latest news, publications, and updates from the world of pharmaceuticals by subscribing to African Pharmaceutical Review. Join our community to receive exclusive newsletters and stay up-to-date with cutting-edge research and developments in the field.
-						</p>
+						</p> --}}
 						<!-- <a href="#" class="btn_1 rounded" target="_parent">
 
 						</a> -->
