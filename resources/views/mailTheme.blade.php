@@ -54,7 +54,7 @@
         </div>
         <div class="footer">
             <p>Contact us at: info@africanpharmaceuticalreview.com</p>
-            <p>&copy; {{date('Y')}} African Pharmaceutical Reviews . All rights reserved.</p>
+            <p>&copy; {{date('Y')}} African Pharmaceutical Review . All rights reserved.</p>
         </div>
     </div>
 </body>
