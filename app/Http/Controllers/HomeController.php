@@ -78,10 +78,10 @@ class HomeController extends Controller
         $SubscriberId = Auth::User()->email;
         $Subject = "Your Subscription:Success";
         // Send Email To Subscriber
-        // SendEmail::sendEmail($Sender,$SenderId,$MessageToSubscriber,$SubscriberName,$SubscriberId,$Subject);
+        SendEmail::sendEmail($Sender,$SenderId,$MessageToSubscriber,$SubscriberName,$SubscriberId,$Subject);
         $Subject = "New Subscriber:Success";
         // Send Email To Pharverse
-        // SendEmail::sendEmails($Sender,$SenderId,$MessageToCompany,$SubscriberName,$SubscriberId,$Subject);
+        SendEmail::sendEmails($Sender,$SenderId,$MessageToCompany,$SubscriberName,$SubscriberId,$Subject);
         return view('thanks');
     }
 }
