@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/manual-login', [App\Http\Controllers\AdminController::class, 'manual'])->name('manual-login');
+Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'manual'])->name('manual-login');
 Route::middleware(['auth:admin'])->group(function () {
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'admin'])->name('admin-home');
     Route::get('/admin/logout', [App\Http\Controllers\AdminController::class, 'logout'])->name('admin-logout');
