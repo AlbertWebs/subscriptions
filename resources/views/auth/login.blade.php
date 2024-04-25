@@ -5,9 +5,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="African Pharmaceutical Review | Subscribers To Our Updates">
+    <meta name="description" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue">
     <meta name="author" content="Ansonika">
-    <title>African Pharmaceutical Review | Subscribers To Our Updates</title>
+    {{--  --}}
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    <meta name="subject" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue">
+    <meta name="rating" content="General">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#1c2c52">
+    <title>African Pharmaceutical Review | Subscribe for FREE to our #1 issue</title>
+    <meta name="description" content="By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights, cutting-edge information from seasoned industry experts and much more. You will also be informed about crucial industry events that are poised to shape the world of pharmaceuticals and biotechnology. Join our community today!">
+    <link rel="canonical" href="https://subscribers.africanpharmaceuticalreview.com"/>
+
+    <meta property="og:description" content="By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights, cutting-edge information from seasoned industry experts and much more. You will also be informed about crucial industry events that are poised to shape the world of pharmaceuticals and biotechnology. Join our community today!" />
+    <meta property="og:title" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://subscribers.africanpharmaceuticalreview.com" />
+    <meta property="og:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/issue.png" />
+    <meta property="og:site_name" content="African Pharmaceutical Review">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:title" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue" />
+    <meta name="twitter:site" content="@af_pharmareview" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@af_pharmareview">
+    <meta name="twitter:url" content="https://subscribers.africanpharmaceuticalreview.com">
+    <meta name="twitter:description" content="By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights, cutting-edge information from seasoned industry experts and much more. You will also be informed about crucial industry events that are poised to shape the world of pharmaceuticals and biotechnology. Join our community today!">
+    <meta name="twitter:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/issue.png">
+    {{--  --}}
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
