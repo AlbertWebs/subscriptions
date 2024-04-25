@@ -22,7 +22,7 @@
     <meta property="og:title" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://subscribers.africanpharmaceuticalreview.com" />
-    <meta property="og:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/issue300.jpg" />
+    <meta property="og:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/magazine-Cover-2.png" />
     <meta property="og:site_name" content="African Pharmaceutical Review">
     <meta property="og:locale" content="en_US">
 
@@ -32,7 +32,7 @@
     <meta name="twitter:site" content="@af_pharmareview">
     <meta name="twitter:url" content="https://subscribers.africanpharmaceuticalreview.com">
     <meta name="twitter:description" content="By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights, cutting-edge information from seasoned industry experts and much more. You will also be informed about crucial industry events that are poised to shape the world of pharmaceuticals and biotechnology. Join our community today!">
-    <meta name="twitter:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/issue300.jpg">
+    <meta name="twitter:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/magazine-Cover-2.png">
     {{--  --}}
 
     <!-- Favicons-->
