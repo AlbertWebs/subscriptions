@@ -713,6 +713,12 @@
                                                     </label>
                                                 </div>
                                                 <div class="form-group">
+                                                    <label class="container_check version_2">Printed Version of Magazine
+                                                        <input type="checkbox" name="subscription_options[]" value="Printed Version of Magazine" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
                                                     <label class="container_check version_2">Event notifications
                                                         <input type="checkbox" name="subscription_options[]" value="Event notifications" class="required" onchange="getVals(this, 'areas_of_interest');">
                                                         <span class="checkmark"></span>
