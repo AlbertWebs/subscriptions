@@ -30,9 +30,9 @@
                             <td>
                                 Job Function:
                                 @if($User->other_Job_function == null)
-
-                                @else
                                 {{$User->Job_function}}
+                                @else
+                                {{$User->other_Job_function}}
                                 @endif
 
                                 <br>
