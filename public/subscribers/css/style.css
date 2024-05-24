@@ -1828,7 +1828,7 @@ input[type=file]::-webkit-file-upload-button:focus, input[type=file].invalid::-w
   cursor: pointer;
   outline: none;
   text-align: center;
-  background: #183354;
+  background: #21EB0F;
   position: relative;
   font-size: 14px;
   font-size: 0.875rem;
