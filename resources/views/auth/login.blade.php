@@ -96,7 +96,7 @@
 		<div class="row row-height">
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
-					<a href="{{url('/')}}" id="logo"><img  src="{{asset('subscribers/img/aprlogo.png')}}" alt="" ></a>
+					<a href="{{url('/')}}" id="logo"><img style="width:200px"  src="{{asset('subscribers/img/aprlogo.png')}}" alt="" ></a>
 
 					<div id="social">
 						<ul>
