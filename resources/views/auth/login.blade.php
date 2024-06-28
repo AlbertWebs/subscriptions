@@ -35,6 +35,13 @@
     <meta name="twitter:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/magazine-Cover-2.jpg">
     {{--  --}}
 
+    <style>
+        .text-bold{
+            font-weight: 900;
+            /* display: none; */
+        }
+    </style>
+
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
@@ -144,8 +151,8 @@
 									<h3 class="main_question">Please fill with your details</h3>
                                     <div class="row">
                                         <div class="form-group">
-                                            <div class="styled-select clearfix">
-                                                <select class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="title">
+                                            <div class="styled-select clearfix" style=" border: 2px solid #183354;">
+                                                <select class="wide required selectpicker" data-show-subtext="true" data-live-search="true"  name="title" style=" border: 3px solid #183354;">
                                                     (Prof, Dr, Mr, Miss, Mrs, Ms, Other)
                                                     <option value="" readonly> Title</option>
                                                     <option value="Prof">Prof</option>
@@ -183,12 +190,14 @@
 
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" name="email" class="form-control required @error('email') is-invalid @enderror" placeholder="Your Email">
+                                        <input type="email" name="email"  id="email" class="form-control required @error('email') is-invalid @enderror" placeholder="Your Email">
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
+                                        <p id="error_email" class="error text-center text-danger text-bold"></p>
+                                        {{-- <span ></span> --}}
                                     </div>
 
 
@@ -217,6 +226,12 @@
 									<div class="form-group">
                                         <input value="Proceed" type="submit" class="login-btns" />
                                     </div>
+
+                                    <div class="form-group terms">
+										<label class="container_check">Already have an account? click<a href="https://africanpharmaceuticalreview.com/login" data-bs-toggle="modals" data-bs-target="#terms-txts" style="color:#21EB0F; font-weight:900"> <strong> Here </strong> </a> to login
+
+										</label>
+									</div>
 
 								</div>
 							</div>
@@ -344,6 +359,50 @@
         }
         }
     </script>
+
+<script>
+    $(document).ready(function(){
+
+     $('#email').blur(function(){
+
+      var error_email = '';
+      var email = $('#email').val();
+      var _token = $('input[name="_token"]').val();
+      var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if(!filter.test(email))
+      {
+       $('#error_email').html('<label class="text-danger">Invalid Email</label>');
+       $('#email').addClass('has-error');
+       $('#register').attr('disabled', 'disabled');
+      }
+      else
+      {
+       $.ajax({
+        url:"{{ route('email_available.check') }}",
+        method:"POST",
+        data:{email:email, _token:_token},
+        success:function(result)
+        {
+         if(result == 'unique')
+         {
+          $('#error_email').html('<label class="text-success">Email Available</label>');
+          $('#email').removeClass('has-error');
+          $('#register').attr('disabled', false);
+         }
+         else
+         {
+          $('#error_email').html('<label class="text-danger">Email Already Exists, Kindly Login to continue</label>');
+          $('#email').addClass('has-error');
+          $('#register').attr('disabled', 'disabled');
+         }
+        }
+       })
+      }
+     });
+
+    });
+    </script>
+
 
 
 </body>

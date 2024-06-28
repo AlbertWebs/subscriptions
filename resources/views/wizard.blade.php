@@ -625,7 +625,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="container_check version_2">Health Supply Chain Management
-                                                    <input type="checkbox" name="areas_of_interest[]" value="Regulatory Affairs" class="required" onchange="getVals(this, 'areas_of_interest');">
+                                                    <input type="checkbox" name="areas_of_interest[]" value="Health Supply Chain Management" class="required" onchange="getVals(this, 'areas_of_interest');">
                                                     <span class="checkmark"></span>
                                                 </label>
                                             </div>

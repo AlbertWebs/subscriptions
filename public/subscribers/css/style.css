@@ -1840,3 +1840,11 @@ input[type=file]::-webkit-file-upload-button:focus, input[type=file].invalid::-w
   line-height: 1;
   padding: 12px 30px;
 }
+
+.form-group input {
+    border: 2px solid #183354;
+}
+
+.styled-select select {
+    border: 3px solid #183354 !important;
+}

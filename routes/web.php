@@ -14,7 +14,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 });
 Route::get('/admin/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
 
-
+Route::post('/email_available/check', [App\Http\Controllers\EmailController::class, 'check'])->name('email_available.check');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
