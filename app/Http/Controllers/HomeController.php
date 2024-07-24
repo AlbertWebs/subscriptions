@@ -219,7 +219,6 @@ class HomeController extends Controller
             [
                 'FNAME'=>Auth::User()->fname,
                 'LNAME'=>Auth::User()->lname,
-
                 'PHONE'=>Auth::User()->phone,
                 'BIRTHDAY'=>'04/08',
                 'MMERGE5'=>$Drug_Delivery, //Drug Delivery
@@ -240,7 +239,7 @@ class HomeController extends Controller
                 'MMERGE20'=>$Webinar_notifications, //Webinar notifications
                 'MMERGE21'=>$Printed_Version_of_Magazine, //Printed Version of Magazine
                 'MMERGE22'=>$Event_notifications, //Event notifications
-                'MMERGE23'=>$country //Printed Version of Magazine
+                'MMERGE23'=>$request->country //Printed Version of Magazine
             ]);
 
         // dd($updateUserDetails);
