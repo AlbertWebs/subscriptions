@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use App\Models\SendEmail;
-use Spatie\Newsletter\Facades\Newsletter;
+// use Spatie\Newsletter\Facades\Newsletter;
+use Newsletter;
 use Redirect;
 
 class HomeController extends Controller
