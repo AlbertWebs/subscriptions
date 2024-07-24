@@ -215,7 +215,7 @@ class HomeController extends Controller
         );
 
         $email = Auth::User()->email;
-        Newsletter::subscribeOrUpdate($email,
+        $Newsletter = Newsletter::subscribeorUpdate($email,
             [
                 'FNAME'=>Auth::User()->fname,
                 'LNAME'=>Auth::User()->lname,
