@@ -215,32 +215,32 @@ class HomeController extends Controller
         );
 
         $email = Auth::User()->email;
-        $Newsletter = Newsletter::subscribeorUpdate($email,
-            [
-                'FNAME'=>Auth::User()->fname,
-                'LNAME'=>Auth::User()->lname,
-                'PHONE'=>Auth::User()->phone,
-                'BIRTHDAY'=>'04/08',
-                'MMERGE5'=>$Drug_Delivery, //Drug Delivery
-                'MMERGE6'=>$Microbiology, //Microbiology
-                'MMERGE7'=>$Analytical_Techniques, //Analytical Techniques
-                'MMERGE8'=>$Formulation_Development, //Formulation Development
-                'MMERGE9'=>$Bioprocessing, //Bioprocessing
-                'MMERGE10'=>$Manufacturing, //Manufacturing
-                'MMERGE11'=>$QA_QC, //Quality Assurance /Quality Control,
-                'MMERGE12'=>$Biopharma, //Biopharma
-                'MMERGE13'=>$Packaging_and_Labelling, //Packaging and Labelling
-                'MMERGE14'=>$Regulatory_Affairs, //Regulatory Affairs
-                'MMERGE15'=>$Health_Supply_Chain_Management, //Health Supply Chain Management
-                'MMERGE16'=>$Artificial_Intelligence, //Artificial Intelligence
-                'MMERGE17'=>$Digital_version, //Digital version of the African Pharmaceutical Review (published quarterly)
-                'MMERGE18'=>$Newsletter, //Newsletter
-                'MMERGE19'=>$Third_party, //Third party (application notes, product development and updates from partners)
-                'MMERGE20'=>$Webinar_notifications, //Webinar notifications
-                'MMERGE21'=>$Printed_Version_of_Magazine, //Printed Version of Magazine
-                'MMERGE22'=>$Event_notifications, //Event notifications
-                'MMERGE23'=>$request->country //Printed Version of Magazine
-            ]);
+        // $Newsletter = Newsletter::subscribeorUpdate($email,
+        //     [
+        //         'FNAME'=>Auth::User()->fname,
+        //         'LNAME'=>Auth::User()->lname,
+        //         'PHONE'=>Auth::User()->phone,
+        //         'BIRTHDAY'=>'04/08',
+        //         'MMERGE5'=>$Drug_Delivery, //Drug Delivery
+        //         'MMERGE6'=>$Microbiology, //Microbiology
+        //         'MMERGE7'=>$Analytical_Techniques, //Analytical Techniques
+        //         'MMERGE8'=>$Formulation_Development, //Formulation Development
+        //         'MMERGE9'=>$Bioprocessing, //Bioprocessing
+        //         'MMERGE10'=>$Manufacturing, //Manufacturing
+        //         'MMERGE11'=>$QA_QC, //Quality Assurance /Quality Control,
+        //         'MMERGE12'=>$Biopharma, //Biopharma
+        //         'MMERGE13'=>$Packaging_and_Labelling, //Packaging and Labelling
+        //         'MMERGE14'=>$Regulatory_Affairs, //Regulatory Affairs
+        //         'MMERGE15'=>$Health_Supply_Chain_Management, //Health Supply Chain Management
+        //         'MMERGE16'=>$Artificial_Intelligence, //Artificial Intelligence
+        //         'MMERGE17'=>$Digital_version, //Digital version of the African Pharmaceutical Review (published quarterly)
+        //         'MMERGE18'=>$Newsletter, //Newsletter
+        //         'MMERGE19'=>$Third_party, //Third party (application notes, product development and updates from partners)
+        //         'MMERGE20'=>$Webinar_notifications, //Webinar notifications
+        //         'MMERGE21'=>$Printed_Version_of_Magazine, //Printed Version of Magazine
+        //         'MMERGE22'=>$Event_notifications, //Event notifications
+        //         'MMERGE23'=>$request->country //Printed Version of Magazine
+        //     ]);
 
         // dd($updateUserDetails);
         DB::table('users')->where('id',Auth::User()->id)->update($updateUserDetails);
