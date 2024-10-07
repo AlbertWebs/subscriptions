@@ -45,6 +45,7 @@
             s.parentNode.insertBefore(ga, s);
         })();
     </script>
+    @include('analytics')
 
 </head>
 
