@@ -82,13 +82,10 @@
 					</div>
 					<!-- /social -->
 					<div>
-						<figure><img src="img/info_graphic_1.svg" alt="" class="img-fluid"></figure>
-						<h2>Subscribe for FREE to our #1 issue</h2>
+						<figure><img src="{{ $landing->imageUrl() }}" alt="" class="img-fluid banner-img"></figure>
+						<h2>{{ $landing->title }}</h2>
 						<p>
-							By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights,
-cutting-edge information from seasoned industry experts and much more. You will also be
-informed about crucial industry events that are poised to shape the world of pharmaceuticals
-and biotechnology. Join our community today!
+							{{ $landing->description }}
 						</p>
 						<!-- <a href="#" class="btn_1 rounded" target="_parent">
 

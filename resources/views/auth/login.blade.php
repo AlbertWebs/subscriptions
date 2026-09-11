@@ -5,34 +5,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue">
+    <meta name="description" content="African Pharmaceutical Review | {{ $landing->title }}">
     <meta name="author" content="Ansonika">
     {{--  --}}
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow"><!-- Google Specific -->
-    <meta name="subject" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue">
+    <meta name="subject" content="African Pharmaceutical Review | {{ $landing->title }}">
     <meta name="rating" content="General">
     <meta name="referrer" content="no-referrer">
     <meta name="theme-color" content="#1c2c52">
-    <title>African Pharmaceutical Review | Subscribe for FREE to our #1 issue</title>
-    <meta name="description" content="By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights, cutting-edge information from seasoned industry experts and much more. You will also be informed about crucial industry events that are poised to shape the world of pharmaceuticals and biotechnology. Join our community today!">
+    <title>African Pharmaceutical Review | {{ $landing->title }}</title>
+    <meta name="description" content="{{ $landing->description }}">
     <link rel="canonical" href="https://subscribers.africanpharmaceuticalreview.com"/>
 
-    <meta property="og:description" content="By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights, cutting-edge information from seasoned industry experts and much more. You will also be informed about crucial industry events that are poised to shape the world of pharmaceuticals and biotechnology. Join our community today!" />
-    <meta property="og:title" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue" />
+    <meta property="og:description" content="{{ $landing->description }}" />
+    <meta property="og:title" content="African Pharmaceutical Review | {{ $landing->title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://subscribers.africanpharmaceuticalreview.com" />
-    <meta property="og:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/magazine-Cover-2.jpg" />
+    <meta property="og:image" content="{{ $landing->imageUrl() }}" />
     <meta property="og:site_name" content="African Pharmaceutical Review">
     <meta property="og:locale" content="en_US">
 
-    <meta name="twitter:title" content="African Pharmaceutical Review | Subscribe for FREE to our #1 issue" />
+    <meta name="twitter:title" content="African Pharmaceutical Review | {{ $landing->title }}" />
     <meta name="twitter:site" content="@af_pharmareview" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@af_pharmareview">
     <meta name="twitter:url" content="https://subscribers.africanpharmaceuticalreview.com">
-    <meta name="twitter:description" content="By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights, cutting-edge information from seasoned industry experts and much more. You will also be informed about crucial industry events that are poised to shape the world of pharmaceuticals and biotechnology. Join our community today!">
-    <meta name="twitter:image" content="https://subscribers.africanpharmaceuticalreview.com/subscribers/img/magazine-Cover-2.jpg">
+    <meta name="twitter:description" content="{{ $landing->description }}">
+    <meta name="twitter:image" content="{{ $landing->imageUrl() }}">
     {{--  --}}
 
     <style>
@@ -117,13 +117,10 @@
 					</div>
 					<!-- /social -->
 					<div>
-						<figure><img  src="{{asset('subscribers/img/issue800.jpg')}}" alt="" class="img-fluid banner-img"></figure>
-						<h2>Subscribe for FREE to our #1 issue</h2>
+						<figure><img  src="{{ $landing->imageUrl() }}" alt="" class="img-fluid banner-img"></figure>
+						<h2>{{ $landing->title }}</h2>
 						<p class="hide-mobile">
-							By subscribing, you gain access to EXCLUSIVE content; articles, opinion pieces, latest insights,
-                            cutting-edge information from seasoned industry experts and much more. You will also be
-                            informed about crucial industry events that are poised to shape the world of pharmaceuticals
-                            and biotechnology. Join our community today!
+							{{ $landing->description }}
 						</p>
 						<!-- <a href="#" class="btn_1 rounded" target="_parent">
 

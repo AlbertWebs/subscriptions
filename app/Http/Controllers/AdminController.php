@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\LandingContent;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -22,7 +23,8 @@ class AdminController extends Controller
     // adminHome
     public function index(){
         $Users = User::where('type','0')->get();
-        return view('admin.index', compact('Users'));
+        $landing = LandingContent::current();
+        return view('admin.index', compact('Users', 'landing'));
     }
 
     public function logout(){

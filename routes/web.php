@@ -13,6 +13,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
 });
 Route::get('/admin/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
+Route::get('/admin/landing/{token}', [App\Http\Controllers\LandingContentController::class, 'edit'])->name('admin.landing.edit');
+Route::put('/admin/landing/{token}', [App\Http\Controllers\LandingContentController::class, 'update'])->name('admin.landing.update');
 
 Route::post('/email_available/check', [App\Http\Controllers\EmailController::class, 'check'])->name('email_available.check');
 

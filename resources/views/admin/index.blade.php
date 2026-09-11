@@ -5,7 +5,18 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            @if(Auth::User()->type == 1)
+            @if((int) Auth::user()->getRawOriginal('type') === 1)
+            <div class="card mb-4">
+                <div class="card-header">Subscribe page</div>
+                <div class="card-body">
+                    <p class="mb-2">Use this unique link to update the subscribe page headline, description, and image:</p>
+                    <p>
+                        <a href="{{ route('admin.landing.edit', $landing->token) }}">
+                            {{ url('/admin/landing/'.$landing->token) }}
+                        </a>
+                    </p>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-header">All Subscribers</div>
                 {{-- Guard Table --}}

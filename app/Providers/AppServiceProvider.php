@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\LandingContent;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer(['auth.login', 'auth.register', 'wizard'], function ($view) {
+            $view->with('landing', LandingContent::current());
+        });
     }
 }
